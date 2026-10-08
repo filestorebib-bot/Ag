@@ -1,0 +1,11 @@
+import SectionHeading from "../components/SectionHeading";
+import {values,sources} from "../data/siteData";
+import {Leaf,Target,Compass,ExternalLink} from "lucide-react";
+export default function About(){
+ return <div className="page"><div className="page-hero"><div className="container"><span className="eyebrow">Our story</span><h1>About Triveni Secondary School</h1><p>Academic foundations with a practical agriculture and plant-science orientation.</p></div></div>
+ <section className="section"><div className="container prose-grid"><div><SectionHeading eyebrow="School introduction" title="A place to learn, practice and grow"/><p>The school profile, establishment history and official milestones should be maintained from verified school records. This starter version deliberately avoids inventing historical facts.</p><p>Use the Admin area to publish the confirmed school history, leadership message, facilities and department information.</p></div><div className="info-panel"><Leaf/><b>Department of Plant Science</b><span>Katari-4, Udayapur, Koshi Province, Nepal</span></div></div></section>
+ <section className="section section-muted"><div className="container"><SectionHeading eyebrow="Direction" title="Vision & Mission"/><div className="vision-grid"><article><Compass/><h3>Vision</h3><p>To nurture capable, responsible and practical learners who can contribute to sustainable agriculture and their communities.</p></article><article><Target/><h3>Mission</h3><p>To provide accessible, disciplined and practice-oriented education that connects scientific knowledge with real agricultural contexts.</p></article></div></div></section>
+ <section className="section"><div className="container"><SectionHeading eyebrow="What we value" title="Core values"/><div className="value-grid">{values.map(([t,d])=><article className="value-card" key={t}><div className="value-num">0{values.findIndex(x=>x[0]===t)+1}</div><h3>{t}</h3><p>{d}</p></article>)}</div></div></section>
+ <section className="section section-soft"><div className="container"><SectionHeading eyebrow="Reference framework" title="Public sources used for research"/><div className="source-list">{sources.map(s=><a href={s.url} target="_blank" rel="noreferrer" key={s.url}><span><b>{s.label}</b><small>{s.note}</small></span><ExternalLink/></a>)}</div></div></section>
+ </div>
+}
