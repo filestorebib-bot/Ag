@@ -1,0 +1,9 @@
+{
+  "name": "Triveni Secondary School — Plant Science",
+  "short_name": "Triveni Plant Science",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7fbf8",
+  "theme_color": "#1d7a46",
+  "icons": [{"src":"/logo.svg","sizes":"any","type":"image/svg+xml"}]
+}
